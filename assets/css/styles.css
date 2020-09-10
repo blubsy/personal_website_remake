@@ -153,8 +153,22 @@ a {
     background-color: #47b147;
     cursor: progress;
 }
-
 /* Hero */
+
+/* About */
+.about{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+/* About */
+
+
+/* About */
+.skills{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+/* About */
 
 .carousel-control-next{
     display: none;
