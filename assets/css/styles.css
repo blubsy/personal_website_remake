@@ -1,0 +1,295 @@
+
+body{
+    background: #100e17 !important;   
+    color: #fff;
+    font-family: "roboto", sans-serif;
+}
+
+.container{
+    overflow: hidden;
+}
+
+address{
+    display: inline-block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+    padding: 0px;
+    background-color: transparent;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    color: #000;
+    opacity: 0.9;
+}
+
+
+/** 
+* -----------------
+* Social Icon Style
+* -----------------
+*/
+.social-icon {
+    display: flex;
+}
+
+.social-icon li{
+    display: flex;
+    justify-content: center;
+    margin-top: 0 auto;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.social-icon li .fa{
+    cursor: pointer;
+    padding: 20px;
+}
+
+.social-icon li:hover{
+    background-color: #256425;
+    margin-top: 0 auto;
+     
+    border-radius: 32% 68% 32% 68% / 83% 26% 74% 17% ;
+}
+
+
+
+.navbar{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    background: #202026 !important;   
+}
+
+.navbar .nav-link{
+    color: white !important; 
+    text-align: center;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+    opacity: 1;
+    line-height: 30px;
+    margin-left: 15px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+    border-bottom: 1px solid #fff;
+}
+
+.navbar-light .navbar-nav a.nav-link:hover{
+    color: azure !important;
+    border-color: azure !important;
+    border-bottom: 1px solid #fff;
+}
+
+.navbar-light .navbar-toggler-icon{
+    color: white!important;
+    background-image: none;
+}
+
+.offcanvas-header{
+    display: none;
+}
+
+.btn-close{
+    position: relative;
+    top: 3px;
+}
+
+.carousel-control{
+    height: 500px;
+}
+
+/* Hero */
+.hero{
+    position: relative;
+    height: 500px;
+    margin-top: 150px;
+}
+
+.hero ul.contact-information li .fa{
+    font-size: 10px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.hero ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.hero .header-info h1{
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 65px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hero .header-info .mini-badge{
+    width: 7rem;
+    border: 1px #256425;
+    padding: 10px;
+    text-align: center;
+    background: #256425;
+    border-radius: 32% 68% 32% 68% / 83% 26% 74% 17%;
+}
+
+.hero .header-info .mini-badge:hover{
+    background-color: #47b147;
+    cursor: progress;
+}
+
+/* Hero */
+
+.carousel-control-next{
+    display: none;
+}
+
+.carousel-control-prev{
+    display: none;
+}
+
+
+@media only screen and (max-width: 767px){
+    .hero .header-info{
+        text-align: center;
+    }
+    .hero .header-info .mini-badge{
+        margin: 0 auto;
+    }
+
+    .hero .header-info .social-icon{
+        justify-content: center;
+    }
+    .hero .header-info .social-icon li{
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 991px){
+
+    .navbar{
+        z-index: 3;
+    }
+
+    .navbar-light .navbar-nav .nav-link{
+        margin: 5px 10px 5px 60px;
+        color: white !important; 
+        text-align: center;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active{
+        border: 1px solid;
+        border-color: #fff;
+        border-radius: 94% 6% 95% 5% / 38% 66% 34% 62% ;
+    }
+
+    .navbar-light .navbar-nav a.nav-link:hover{
+        border: 1px solid;
+        border-color: azure;
+        border-radius: 94% 6% 95% 5% / 38% 66% 34% 62% ;
+        animation: wiggle .5s ease-in-out alternate;
+    }
+
+    @keyframes wiggle {
+        0% {
+            border-radius: 94% 6% 95% 5% / 38% 66% 34% 62%;
+        }
+        50% {
+            border-radius: 21% 79% 53% 47% / 67% 21% 79% 33% ;
+        }
+        100% {
+            border-radius: 94% 6% 95% 5% / 38% 66% 34% 62%;
+        }
+    }
+
+    
+    .offcanvas-header{
+        display: block;
+    }
+
+    .navbar-collapse{
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: visibility .2s ease-in-out;
+    }
+
+    .navbar-collapse.show{
+        visibility: visible;
+        /* border-radius: 44% 96% 0% 100% / 0% 0% 100% 100% ; */
+        border-radius: 40% 60% 0% 100% / 31% 0% 100% 69%  ;
+        transform: translateX(-100%);
+        width: 50%;
+        animation: leftshow 0.2s ease-in-out;
+    }
+
+    .offcanvas-active .container .navbar-toggler{
+        visibility: hidden !important;
+        transition: visibility .2s ease-out;
+    }
+
+
+    @keyframes leftshow {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 50%;
+        }
+    }
+
+    .navbar-collapse.hide-offcanfas{
+        visibility: visible;
+        /* border-radius: 44% 96% 0% 100% / 0% 0% 100% 100% ; */
+        border-radius: 40% 60% 0% 100% / 31% 0% 100% 69%  ;
+        transform: translateX(-100%);
+        width: 50%;
+        animation: righthide 0.2s ease-in-out;
+    }
+
+
+    @keyframes righthide {
+        0% {
+            width: 50%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+    
+
+    .btn-close{
+        background-color: black;
+        border-radius: 50%;
+        border-color: transparent;
+        color: #fff;
+        position: relative;
+        right: -77%;
+    }
+
+}
+
